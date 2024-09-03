@@ -1,7 +1,7 @@
 "use client";
 import animationData from "../lottiefiles/Animation - 1725373039287.json";
 import Lottie from "lottie-react";
-import { PurpleActionButton } from "../components/Buttons";
+import { GreyActionButton, PurpleActionButton } from "../components/Buttons";
 
 export default function FirstHero() {
   const defaultOptions = {
@@ -24,7 +24,7 @@ export default function FirstHero() {
             to build your custom solution from discovery to deployment.
           </p>
           <div className="flex gap-3">
-            <PurpleActionButton text = "See our work"/>
+            <GreyActionButton text = "See our work"/>
             <PurpleActionButton text = "Contact us"/>
           </div>
         </div>
