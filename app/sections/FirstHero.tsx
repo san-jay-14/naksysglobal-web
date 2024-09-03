@@ -1,4 +1,18 @@
+"use client"
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import animationData from '../lottiefiles/Animation - 1725373039287.json'
+import Lottie from 'lottie-react';
+
 export default function FirstHero() {
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true, 
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
   return (
     <div className="w-full flex py-8 px-32 h-[85vh]">
       <div className="flex">
@@ -12,13 +26,9 @@ export default function FirstHero() {
           </p>
         </div>
         <div className="w-[40%]">
-          <p>
-            We are a team of talented developers who are passionate about
-            creating innovative web software mobile business applications. We
-            specialize in developing custom web software mobile business
-            applications that are tailored to meet the unique needs of your
-            business.
-          </p>
+          <div>
+          <Lottie animationData={animationData} />
+          </div>
         </div>
       </div>
     </div>
