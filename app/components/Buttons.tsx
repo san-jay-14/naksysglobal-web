@@ -20,7 +20,7 @@ export function TransparentWhiteButton({ text }: { text: string }) {
 
 export function TransparentBlackButton({ text }: { text: string }) {
   return (
-    <button className="px-4 py-2 bg-black text-white border border-white rounded-3xl hover:bg-gray-800 transition-colors">
+    <button className="px-5 py-2 bg-[#171717] text-white text-lg border border-white rounded-3xl hover:bg-gray-800 transition-colors">
       {text}
     </button>
   );

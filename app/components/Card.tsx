@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 
-import Arrow from "../../public/arrow.svg";
+import Arrow from "../../public/portfolio-images/arrow.svg";
 import Image from "next/image";
 
 interface CardProps {
@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({ image }) => {
 
   return (
     <motion.div
-      className="relative overflow-hidden h-[200px] min-w-[200px] bg-slate-400 rounded-xl flex justify-center items-center"
+      className="relative overflow-hidden h-[300px] min-w-[300px] bg-slate-400 rounded-xl flex justify-center items-center"
       key={image}
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}

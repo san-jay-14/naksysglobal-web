@@ -1,19 +1,13 @@
-import Card from "@/app/components/Card";
 import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 import useMeasure from "react-use-measure";
+import Card from "@/app/components/Card";
 
-export default function Home() {
-  const images = [
-    "/image-1.jpg",
-    "/image-2.jpg",
-    "/image-3.jpg",
-    "/image-4.jpg",
-    "/image-5.jpg",
-    "/image-6.jpg",
-    "/image-7.jpg",
-    "/image-8.jpg",
-  ];
+interface CarouselProps {
+  images: string[];
+}
+
+const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const FAST_DURATION = 25;
   const SLOW_DURATION = 75;
 
@@ -21,7 +15,6 @@ export default function Home() {
   let [ref, { width }] = useMeasure();
 
   const xTranslation = useMotionValue(0);
-
   const [mustFinish, setMustFinish] = useState(false);
   const [rerender, setRerender] = useState(false);
 
@@ -52,9 +45,11 @@ export default function Home() {
   }, [rerender, xTranslation, duration, width]);
 
   return (
-    <main className="py-8">
+    <div className="relative w-full overflow-hidden">
+      {" "}
+      {/* Container with overflow-hidden */}
       <motion.div
-        className="absolute left-0 flex gap-4"
+        className="flex gap-4"
         style={{ x: xTranslation }}
         ref={ref}
         onHoverStart={() => {
@@ -67,9 +62,11 @@ export default function Home() {
         }}
       >
         {[...images, ...images].map((item, idx) => (
-          <Card image={`${item}`} key={idx} />
+          <Card image={item} key={idx} />
         ))}
       </motion.div>
-    </main>
+    </div>
   );
-}
+};
+
+export default Carousel;
