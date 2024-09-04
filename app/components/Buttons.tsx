@@ -59,9 +59,9 @@ export function ContactActionButton({
   color: string;
 }) {
   return (
-    <motion.div className="flex items-center w-auto group" whileHover="hover">
+    <motion.div className="inline-flex items-center group" whileHover="hover">
       <button
-        className={`px-6 py-2 text-white rounded-3xl hover:bg-purple-700 transition-colors`}
+        className="px-6 py-2 text-white rounded-3xl hover:bg-purple-700 transition-colors"
         style={{ backgroundColor: color }}
       >
         {text}
