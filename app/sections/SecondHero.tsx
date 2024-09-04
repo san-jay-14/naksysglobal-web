@@ -44,7 +44,7 @@ export default function FirstHero() {
               development expertise, delivering innovative solutions to elevate
               your brand and boost your bottom line.
             </div>
-            <div>
+            <div className="mb-[3rem]">
               <WhiteActionButton text="More about our services" />
             </div>
           </div>
