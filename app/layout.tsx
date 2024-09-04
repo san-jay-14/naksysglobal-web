@@ -5,7 +5,7 @@ import "./globals.css";
 import Footer from "./sections/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
-const poppins = Poppins({ weight: ["500", "600"], subsets: ["latin"] });
+const poppins = Poppins({ weight: ["300", "500", "600"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>{children}</body>
-      <Footer/>
+      <Footer />
     </html>
   );
 }
