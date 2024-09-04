@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({ image }) => {
 
             {/* Text and arrow */}
             <motion.h1
-              className="relative z-30 bg-white font-semibold text-sm px-3 py-2 rounded-full flex items-center gap-1 hover:opacity-75"
+              className="relative z-30 bg-white font-semibold text-sm px-3 py-2 rounded-full flex items-center gap-1 hover:opacity-75 cursor-pointer"
               initial={{ y: 10 }}
               animate={{ y: 0 }}
               exit={{ y: 10 }}
